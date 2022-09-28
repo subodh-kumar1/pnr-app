@@ -39,3 +39,8 @@ The HtmlWebpackPlugin creates the HTML file. We have told this to use our index.
 The HotModuleReplacementPlugin and devServer.hot allow modules to be updated while an application is running, without a full reload.
 The devtool field tells Webpack to use full inline source maps. This allows us to debug the original code before transpilation.
 The devServer field configures the Webpack development server. We tell Webpack that the root of the webserver is the build folder, and to serve files on port 4000. historyApiFallback is necessary for deep links to work in multi-page apps. We are also telling Webpack to open the browser after the server has been started.
+
+webpack.prod.config.ts is similar to the webpack.dev.config.ts with the following differences:
+We’ve specified the mode to be production. Webpack will automatically set process.env.NODE_ENV to "production" which means we won’t get the React development tools included in the bundle.
+The output field tells Webpack where to bundle our code. In our project, this is the build folder. We have used the [name] token to allow Webpack to name the files if our app is code split. We have used the [contenthash] token so that the bundle file name changes when its content changes, which will bust the browser cache.
+The CleanWebpackPlugin plugin will clear out the build folder at the start of the bundling process.
