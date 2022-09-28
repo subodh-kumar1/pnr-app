@@ -20,3 +20,10 @@ Babel Packages
 - @babel/preset-react: This is a collection of plugins that enable Babel to transform React code into JavaScript.
 - @babel/preset-typescript: This is a plugin that enables Babel to transform TypeScript code into JavaScript.
 - @babel/plugin-transform-runtime and @babel/runtime: These are plugins that allow us to use the async and await JavaScript features.
+
+ESLint Dependencies
+- eslint: This is the core ESLint library.
+- eslint-plugin-react: This contains some standard linting rules for React code.
+- eslint-plugin-react-hooks: This includes some linting rules for React hooks code.
+- @typescript-eslint/parser: This allows TypeScript code to be linted.
+- @typescript-eslint/eslint-plugin: This contains some standard linting rules for TypeScript code.
