@@ -1,0 +1,19 @@
+{
+  "name": "pnr-app",
+  "version": "1.0.0",
+  "description": "react ui app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subodh-kumar1/pnr-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subodh-kumar1/pnr-app/issues"
+  },
+  "homepage": "https://github.com/subodh-kumar1/pnr-app#readme"
+}
