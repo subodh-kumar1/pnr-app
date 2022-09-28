@@ -27,3 +27,15 @@ ESLint Dependencies
 - eslint-plugin-react-hooks: This includes some linting rules for React hooks code.
 - @typescript-eslint/parser: This allows TypeScript code to be linted.
 - @typescript-eslint/eslint-plugin: This contains some standard linting rules for TypeScript code.
+
+Here are the critical bits in this webpack.dev.config.ts file:
+
+The mode field tells Webpack whether the app needs to be bundled for production or development. We are configuring Webpack for development, so we have set this to "development". Webpack will automatically set process.env.NODE_ENV to "development" which means we get the React development tools included in the bundle.
+The output.public field tells Webpack what the root path is in the app. This is important for deep linking in the dev server to work properly.
+The entry field tells Webpack where to start looking for modules to bundle. In our project, this is index.tsx.
+The module field tells Webpack how different modules will be treated. Our project is telling Webpack to use the babel-loader plugin to process files with .js, .ts, and .tsx extensions.
+The resolve.extensions field tells Webpack what file types to look for in which order during module resolution. We need to tell it to look for TypeScript files as well as JavaScript files.
+The HtmlWebpackPlugin creates the HTML file. We have told this to use our index.html in the src folder as the template.
+The HotModuleReplacementPlugin and devServer.hot allow modules to be updated while an application is running, without a full reload.
+The devtool field tells Webpack to use full inline source maps. This allows us to debug the original code before transpilation.
+The devServer field configures the Webpack development server. We tell Webpack that the root of the webserver is the build folder, and to serve files on port 4000. historyApiFallback is necessary for deep links to work in multi-page apps. We are also telling Webpack to open the browser after the server has been started.
