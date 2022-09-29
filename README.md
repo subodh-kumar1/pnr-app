@@ -1,4 +1,4 @@
-# PNR APP
+# REACT APP
 
 TS Config Details
 - lib: The standard typing to be included in the type checking process. In our case, we have chosen to use the types for the browser’s DOM and the latest version of ECMAScript.
