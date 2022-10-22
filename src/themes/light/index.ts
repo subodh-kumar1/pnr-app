@@ -2,26 +2,21 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const baseTheme = createTheme({
   palette: {
+    mode: "light",
     primary: {
-      main: "#08313A",
+      main: "#1C4670",
+      contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#1A5653",
+      main: "#278AB0",
     },
-    background: {
-      default: "#00000",
-      paper: "#c6dad9",
-    },
-    // background: {
-    //     default: '#769c7a',
-    //     paper: '#a6c9c9',
-    // },
   },
   typography: {
     fontSize: 12,
     button: {
       textTransform: "none",
     },
+    fontFamily: "sans-serif",
   },
 });
 
