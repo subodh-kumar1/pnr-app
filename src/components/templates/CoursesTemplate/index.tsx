@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Container, Grid,Box } from "@mui/material";
 
 interface CoursesTemplateInterface {
   header: React.ReactNode;
@@ -14,7 +14,7 @@ const CoursesTemplate = (props: CoursesTemplateInterface) => {
         {header}
       </Grid>
       <Grid item sm={12}>
-        <Container maxWidth="md">{body}</Container>
+        <Container maxWidth="md"><Box padding={2}>{body}</Box></Container>
       </Grid>
       <Grid item sm={12}>
         {footer}
