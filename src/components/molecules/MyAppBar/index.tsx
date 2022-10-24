@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Avatar, Box, Typography } from "@mui/material";
+import { AppBar, Avatar, Box, Link, Typography } from "@mui/material";
 
 const MyAppBar = () => {
   return (
@@ -17,13 +17,19 @@ const MyAppBar = () => {
           }}
         >
           <Box sx={{ margin: 2 }}>
-            <Typography variant="h6">Courses</Typography>
+            <Link href="/" color="lightcyan" underline="none">
+              <Typography variant="h6">Courses</Typography>
+            </Link>
           </Box>
           <Box sx={{ margin: 2 }}>
-            <Typography variant="h6">About Us</Typography>
+            <Link href="/about" color="lightcyan" underline="none">
+              <Typography variant="h6">About Us</Typography>
+            </Link>
           </Box>
           <Box sx={{ margin: 2 }}>
-            <Typography variant="h6">Get In Touch</Typography>
+            <Link href="/contact" color="lightcyan" underline="none">
+              <Typography variant="h6">Get In Touch</Typography>
+            </Link>
           </Box>
           <Box sx={{ margin: 1 }}>
             <Avatar alt="Subodh Kumar" />

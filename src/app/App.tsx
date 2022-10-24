@@ -1,12 +1,12 @@
 import React from "react";
 import { ThemeProvider } from "@emotion/react";
-import CoursesPage from "../pages/CoursesPage";
 import themeLight from "../themes/light";
+import RouteHandler from "./RouteHandler";
 
 const App = () => {
   return (
     <ThemeProvider theme={themeLight}>
-      <CoursesPage />
+      <RouteHandler />
     </ThemeProvider>
   );
 };
