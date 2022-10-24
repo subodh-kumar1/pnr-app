@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Grid, Box } from "@mui/material";
 
-interface CoursesTemplateInterface {
+interface AboutTemplateInterface {
   header: React.ReactNode;
   body: React.ReactNode;
   footer: React.ReactNode;
 }
-const CoursesTemplate = (props: CoursesTemplateInterface) => {
+const AboutTemplate = (props: AboutTemplateInterface) => {
   const { header, body, footer } = props;
   return (
     <Grid container rowSpacing={1}>
@@ -25,4 +25,4 @@ const CoursesTemplate = (props: CoursesTemplateInterface) => {
   );
 };
 
-export default CoursesTemplate;
+export default AboutTemplate;
