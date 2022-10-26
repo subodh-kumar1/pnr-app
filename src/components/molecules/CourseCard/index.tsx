@@ -1,6 +1,13 @@
 import React from "react";
-import { Card, CardContent, CardHeader, Tooltip, Typography } from "@mui/material";
-import {makeStyles} from "@mui/styles";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Link,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 export interface CourseInterface {
   courseId: number;
@@ -10,26 +17,28 @@ export interface CourseInterface {
 }
 
 const useStyles = makeStyles(() => ({
-  root:{
-    borderColor: '#278AB0',
-    borderWidth: '2px',
-    borderRadius: '4px'
-  }
-}))
+  root: {
+    backgroundColor: "#278AB0",
+    color: "ButtonFace",
+    borderWidth: "2px",
+    borderRadius: "4px",
+  },
+}));
 const CourseCard = (props: CourseInterface) => {
   const style = useStyles();
   const { courseId, title, noOfChapters, description } = props;
   return (
     <Tooltip title={description}>
-    <Card key={courseId} variant="outlined" className={style.root}>
-      <CardHeader title={title} />
-      <CardContent>
-        <Typography variant="subtitle1" color="CaptionText">
-          {noOfChapters} Chapters
-        </Typography>
-        
-      </CardContent>
-    </Card>
+      <Link href="/subject" underline="none">
+        <Card key={courseId} variant="outlined" className={style.root}>
+          <CardHeader title={title} />
+          <CardContent>
+            <Typography variant="subtitle1" color="ActiveBorder">
+              {noOfChapters} Chapters
+            </Typography>
+          </CardContent>
+        </Card>
+      </Link>
     </Tooltip>
   );
 };

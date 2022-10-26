@@ -6,6 +6,7 @@ interface AboutTemplateInterface {
   body: React.ReactNode;
   footer: React.ReactNode;
 }
+
 const AboutTemplate = (props: AboutTemplateInterface) => {
   const { header, body, footer } = props;
   return (
@@ -15,7 +16,9 @@ const AboutTemplate = (props: AboutTemplateInterface) => {
       </Grid>
       <Grid item sm={12}>
         <Container maxWidth="md">
-          <Box padding={2}>{body}</Box>
+          <Box padding={2} minHeight="70vh">
+            {body}
+          </Box>
         </Container>
       </Grid>
       <Grid item sm={12}>

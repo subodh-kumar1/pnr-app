@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Footer from "../../components/molecules/Footer";
 import MyAppBar from "../../components/molecules/MyAppBar";
 import AboutPage from "../../pages/AboutPage";
 import CoursesPage from "../../pages/CoursesPage";
+import SubjectPage from "../../pages/SubjectPage";
 
 const RouteHandler = () => {
   return (
@@ -11,6 +13,7 @@ const RouteHandler = () => {
       <Routes>
         <Route path="/" element={<CoursesPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/subject" element={<SubjectPage />} />
         <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
