@@ -16,9 +16,11 @@ const Subtopic = (props: SubtopicInterface) => {
         <CardContent>
           {content.map((para, index) => {
             return (
-              <Typography key={index} variant="body1">
-                {para}
-              </Typography>
+              <Typography
+                dangerouslySetInnerHTML={{ __html: para }}
+                key={index}
+                variant="body1"
+              />
             );
           })}
         </CardContent>

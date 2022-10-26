@@ -1,6 +1,7 @@
 const subject = {
   courseId: 0,
   title: "System Design",
+  description: "Very useful for Senior Software Engineers.",
   topics: [
     {
       topic: "Introduction",
