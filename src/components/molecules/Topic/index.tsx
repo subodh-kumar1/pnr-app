@@ -1,3 +1,4 @@
+import React from "react";
 import { ExpandCircleDown } from "@mui/icons-material";
 import {
   Accordion,
@@ -5,7 +6,6 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import React from "react";
 
 import Subtopic, { SubtopicInterface } from "../Subtopic";
 
