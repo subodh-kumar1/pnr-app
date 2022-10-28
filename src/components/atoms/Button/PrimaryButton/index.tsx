@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 export interface ButtonProps {
   label: string | JSX.Element;
-  disabled: boolean;
+  disabled: boolean | undefined;
   onClick: () => void;
 }
 

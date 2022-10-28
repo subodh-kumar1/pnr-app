@@ -18,7 +18,6 @@ const Template: ComponentStory<typeof SecondaryButton> = (args) => (
 export const Secondary = Template.bind({});
 
 Secondary.args = {
-  disabled: false,
   label: "Secondary Button",
   onClick: () => {
     /*no ops */

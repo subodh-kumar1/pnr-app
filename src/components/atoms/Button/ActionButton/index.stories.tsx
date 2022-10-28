@@ -18,7 +18,6 @@ const Template: ComponentStory<typeof ActionButton> = (args) => (
 export const Action = Template.bind({});
 
 Action.args = {
-  disabled: false,
   label: "Action Button",
   onClick: () => {
     /*no ops */
